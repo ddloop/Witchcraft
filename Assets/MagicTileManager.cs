@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Networking.PlayerConnection;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MagicTileManager : MonoBehaviour
@@ -65,7 +65,6 @@ public class MagicTileManager : MonoBehaviour
 
         var newTile = Instantiate(tileReference, spawnPosition, tileReference.transform.rotation, null);
         allTiles.Add(newTile.GetComponent<MagicTile>());
-        //RecalculateTiles();
     }
 
     public void RecalculateTiles()

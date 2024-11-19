@@ -32,7 +32,7 @@ public class WitchBehavior : MonoBehaviour
     void Update()
     {
         //transform.position += 2 * Time.deltaTime * Vector3.right;
-        rb.AddForce(Vector3.right * 50 * Time.deltaTime, ForceMode2D.Force);
+        rb.AddForce(Vector3.right * Time.deltaTime, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -6,6 +6,7 @@ using UnityEngine;
 public class MagicTile : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    public float timeToLive;
 
     private void Awake()
     {
@@ -30,5 +31,10 @@ public class MagicTile : MonoBehaviour
         {
             Debug.Log("WHAT");
         }        
+    }
+
+    private void OnDestroy()
+    {
+        FindAnyObjectByType<MagicTileManager>().allTiles.Remove(this);
     }
 }
